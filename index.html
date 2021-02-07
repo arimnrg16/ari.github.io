@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Ari Whuandaniel</title>
+  <meta name="description" content="Ari Whuandaniel's Portfolios Web">
+  <meta name="author" content="Ari Whuandaniel">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Lora:400i,700i&display=swap" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css">
+  <link rel="stylesheet" href="css/theme.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <link rel="stylesheet" href="jquery.horizontal.scroll.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" 
+          integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" 
+          crossorigin="anonymous">
+  </script>
+  <script src="jquery.horizontal.scroll.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="navbar" data-scroll-header>
+    <div class="container">
+      <div class="row middle-md between-md">
+        <div class="col-md-6 col-xs-12" style="margin-top: 16px">
+          <div class="row start-md center-xs"><h5 class="nav-brand col">Ari Whuandaniel</h5></div>
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-top: 16px">
+          <div id="nav-menu-group" class="row nav-menu-group end-md center-xs">
+            <a class="nav-menu nav-menu-active" data-scroll href="#hero">
+              <div class="menu-indicator"></div>Portfolios
+            </a>
+            <a class="nav-menu" data-scroll href="#stories">
+              <div class="menu-indicator"></div>Stories
+            </a>
+            <a class="nav-menu" data-scroll href="#contacts">
+              <div class="menu-indicator"></div>Contacts
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin-top: 144px;">
+    <div id="hero" class="row section section-hero middle-md start-md center-xs">
+      <img class="hero-image col-md-7 col-xs-12"
+        src="" />
+      <div class="hero-content first-md col-md col-xs-12">
+        <h1 class="hero-title"></h1>
+        <p class="hero-subtitle"></p>
+        <a href="" target="_blank"><button class="btn btn-primary">Read More</button></a>
+      </div>
+    </div>
+    <div id="portfolios" class="row section section-portfolios">
+      <div class="col-md col-xs portfolio-grid">
+      </div>
+      <div class="col-md col-xs portfolio-grid">
+      </div>
+    </div>
+    <div id="stories" class="row section section-stories">
+      <div class="col-xs-12">
+      <div class="stories-label row start-lg center-xs">
+        <div class="col-xs stories-caption">Stories</div>
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <div id="stories-list" class="row">
+      </div>
+    </div>
+  </div>
+    <div id="contacts" class="section section-contacts">
+        <div id="social-links" class="row center-xs">
+        </div>
+        <div class="row center-xs" style="margin-top: 24px">
+          <div class="col-xs">Ari Whuandaniel<span class="accent-indicator"></span> 2021</div>
+        </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+
+    // ============ CONTENT JSON ===============
+    let hero = {
+      title: "Studi Kasus UX - Traveli",
+      description: "bingung mau liburan kemana?",
+      url: "https://www.figma.com/proto/QVbyakkhari4eC8WNiHff8/Present-Traveli?node-id=27%3A5&scaling=contain",
+      image: "https://cdn.dribbble.com/users/4189231/screenshots/11141145/media/330b410a91a850a77d808ad3912e1cc8.jpg?compress=1&resize=800x600",
+    }
+
+    let portfolios = [
+      {
+      	title: "Redesign Menu Dicoding - Interaction Design",
+      	description: "App concept untuk aplikasi dicoding dengan animasi interaksi menggunakan Figma Smart Animate",
+      	url: "https://dribbble.com/shots/7800353-Nike-Adapt-BB-Figma-Smart-Animate",
+      	image: "https://cdn.dribbble.com/users/2550465/screenshots/9705495/media/54beed86e8b396363cf5e1ec989c76f2.png?compress=1&resize=800x600",
+      },  
+      {
+        title: "Atraksi dan Event | tiket.com",
+        description: "Explorasi terhadap fitur Atraksi dan Event pada aplikasi mobile tiket.com",
+        url: "https://medium.com/chevalier-lab/studi-kasus-ux-explorasi-fitur-atraksi-dan-event-aplikasi-tiket-com-576a64e4c6a2",
+        image: "https://cdn.dribbble.com/users/1615489/screenshots/14354211/media/76430f6fdf62d2dca8f75ce11aac6a61.jpg?compress=1&resize=800x600",
+      },
+      {
+      	title: "BRISpot",
+      	description: "BRISpot merupakan project open-source untuk sebuah aplikasi tanggap bencana yang dibuat khusus untuk keluarga Indonesia.",
+      	url: "https://medium.com/chevalier-lab/studi-kasus-ux-explorasi-fitur-atraksi-dan-event-aplikasi-tiket-com-576a64e4c6a2",
+      	image: "https://miro.medium.com/max/572/1*z6YzcoS3OkcxUznWOwrAcQ.png",
+      },    
+      {
+        title: "BukaBuku",
+        description: "Aplikasi berbasis web dengan model bisnis penjualan buku elektronik per bagian hingga per paragraf",
+        url: "https://medium.com/chevalier-lab/studi-kasus-user-interface-bukabuku-66e158a65a32",
+        image: "https://miro.medium.com/max/688/0*4mbeGIJpKmiF8szv",
+      },
+      {
+        title: "Milena - Mandiri Investment for Milenials",
+        description: "Aplikasi investasi untuk para milenial dengan fitur lifegoals dan Mandiri Payment",
+        url: "https://medium.com/chevalier-lab/studi-kasus-ux-explorasi-fitur-atraksi-dan-event-aplikasi-tiket-com-576a64e4c6a2",
+        image:"https://cdn.dribbble.com/users/1615489/screenshots/14354211/media/1e5eb62542008af15494c3c487e9cd10.jpg?compress=1&resize=800x600",
+        // image: "/images/milena.png",
+      },
+    ]
+
+    let stories = [
+      {
+        title: "Redesign Information Architecture in Del Institute of Technology Website",
+        description: "Di artikel ini, sesuai dengan judul “Redesign Information Architecture in Del Institute of Technology Website",
+        url: "https://medium.com/@arimnrg16/redesign-information-architecture-in-del-institute-of-technology-website-ebae3845059",
+        image: "https://miro.medium.com/max/700/1*YJ8sUBZrXuPz_XPjwc_0ow.jpeg",
+      },
+      {
+        title: "Dibalik the black look Spotify",
+        description: "Spotify adalah layanan streaming musik digital, podcast, dan video yang memberimu akses ke jutaan lagu dan konten lain dari artis di seluruh dunia.",
+        url: "https://medium.com/@arimnrg16/medium-dibalik-the-black-look-spotify-3d2c6a026180",
+        image: "https://miro.medium.com/max/700/1*ySOSrvLix4HvDiabCOa0lw.png",
+      },
+      {
+        title: "Analisis 5 Elemen User Experience pada Website Institut Teknologi Del",
+        description: "Saat pertama kali mendalami UX Design, saya disarankan untuk memahami Design Thinking. Apa itu?",
+        url: "Saya akan menganalisis penerapan 5 elemen User Experience yang penting saat membuat sebuah website dengan study case website Institut Teknologi Del",
+        image: "https://miro.medium.com/max/540/1*Xs0jM5n0TiaJEM-LUHnlog.png",
+      },
+    ]
+
+    let socials = [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/ari-whuandaniel-manurung-b72746154/",
+      },
+      {
+        name: "Medium",
+        url: "https://medium.com/@arimnrg16",
+      },
+      {
+        name: "Dribbble",
+        url: "https://dribbble.com/arimanurung16",
+      },
+      {
+        name: "Instagram",
+        url: "https://www.instagram.com/ariwhuann.o_0/",
+      },
+    ]
+
+    // ============ DOM MANIPULATION ===========
+
+    // Hero
+    $("#hero > img").attr("src", hero.image);
+    $("#hero .hero-title").text(hero.title);
+    $("#hero .hero-subtitle").text(hero.description);
+    $("#hero .hero-content > a").attr("href",hero.url);
+
+    // Stories
+    stories.forEach((s)=>
+    {
+      $("#stories-list").append(
+        `<div class="col-md-4 col-xs-12 stories-card">
+            <div class="stories-image-accent"></div>
+            <a href="${s.url}" target="_blank"><img class="stories-image" src="${s.image}" /></a>
+            <p class="stories-title">${s.title}</p>
+              <p class="stories-subtitle">${s.description}</p>
+              <a href="${s.url}" target="_blank"><button class="stories-button"><span class="stories-button-indicator"></span>Read More</button></a>
+          </div>`
+      );
+    });
+
+    let gridList = $("#portfolios div");
+    portfolios.forEach((p, i)=>
+    {
+      $(gridList[i%gridList.length]).append(
+        `<div class="portfolio-item">
+          <img class="portfolio-image"
+            src="${p.image}" />
+          <div class="portfolio-content row bottom-md">
+            <div>
+              <a href="${p.url}" target="_blank" class="portfolio-title">${p.title}</a>
+              <p class="portfolio-subtitle">${p.description}</p>
+              <a href="${p.url}" target="_blank"><button class="portfolio-button"><span class="portfolio-button-indicator"></span>Read More</button>
+            </div>
+          </div>
+        </div>`
+      );
+    });
+
+    socials.forEach((s)=>{
+      $("#social-links").append(
+        `<div class="col item-contact"><a target="_blank" href='${s.url}'>${s.name}</a></div>`
+      );
+    });
+
+  </script>
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
